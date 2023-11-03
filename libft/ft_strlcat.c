@@ -5,14 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: srachidi <srachidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/01 14:33:04 by srachidi          #+#    #+#             */
-/*   Updated: 2023/11/02 09:05:07 by srachidi         ###   ########.fr       */
+/*   Created: 2023/11/02 10:38:47 by srachidi          #+#    #+#             */
+/*   Updated: 2023/11/02 17:41:12 by srachidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <string.h>
 
-size_t	len(const char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t	size;
 
@@ -22,54 +23,40 @@ size_t	len(const char *str)
 	return (size);
 }
 
-size_t	strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	int	srclen;
-	int	dstlen;
-	int	i;
-	int	j;
+	size_t			srclen;
+	size_t			dstlen;
+	unsigned int	i;
 
 	i = 0;
-	j = 0;
-	srclen = len(src);
-	dstlen = len(dst);
-	if (srclen == dstlen)
-		return (srclen + dstlen);
-	else if (dstsize > dstlen + srclen)
+	srclen = ft_strlen(src);
+	dstlen = ft_strlen(dst);
+	if (dstlen >= dstsize || dstsize == 0)
+		return (srclen + dstsize);
+	while (src[i] && (i + dstlen) < dstsize - 1)
 	{
-		while (dst[i])
-			i++;
-		while (src[j])
-		{
-			dst[i] = src[j];
-			i++;
-			j++;
-		}
-		dst[i] = '\0';
+		dst[i + dstlen] = src[i];
+		i++;
 	}
-	else
-	{
-		while (src[j] && j < dstsize - 1)
-		{
-			dst[i] = src[j];
-			i++;
-			j++;
-		}
-	}
+	dst[dstlen + i] = '\0';
 	return (srclen + dstlen);
 }
 
-int	main(void)
-{
-	char src[5] = {'r','a','c','h','i'};
-	char dst[10] = {'s','a','l','a','h'};
+// int	main(void)
+// {
+// 	// size_t	res;
+// 	// char src[] = "ndrix";
+// 	// char dst[10] = "skafanadri";
+// 	// res = strlcat(dst, src, sizeof(dst));
+// 	// printf("strlcat result string : %s \n", dst);
+// 	// printf("strlcat returned value : %zu\n", res);
+// 	printf("------------------------------------\n");
+// 	size_t	fres;
 
-	ft_strlcat(dst, src, 10);
-	
-	unsigned int i  = 0;
-	while (i < len(dst))
-	{
-		printf("%c",dst[i]);
-		i++;
-	}
-}
+// 	char fsrc[] = "ndrix";
+// 	char *fdst = "skafanadri";
+// 	fres = ft_strlcat(fdst, fsrc, 10);
+// 	printf("ft_strlcat result string : %s \n", fdst);
+// 	printf("ft_strlcat returned value : %zu\n", fres);
+// }
