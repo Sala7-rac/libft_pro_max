@@ -6,12 +6,12 @@
 /*   By: srachidi <srachidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 11:28:43 by srachidi          #+#    #+#             */
-/*   Updated: 2023/11/04 18:21:05 by srachidi         ###   ########.fr       */
+/*   Updated: 2023/11/06 10:39:29 by srachidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-// #include <string.h>
+#include "libft.h"
+
 	// work with kda istead of b to preserve the first argument return value
 void	*ft_memset(void *b, int c, size_t len)
 {

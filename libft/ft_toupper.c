@@ -6,11 +6,12 @@
 /*   By: srachidi <srachidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 21:20:33 by srachidi          #+#    #+#             */
-/*   Updated: 2023/11/01 10:34:38 by srachidi         ###   ########.fr       */
+/*   Updated: 2023/11/06 12:42:51 by srachidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
+#include "libft.h"
+
 int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)

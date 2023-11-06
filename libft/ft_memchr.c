@@ -6,12 +6,11 @@
 /*   By: srachidi <srachidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 18:29:32 by srachidi          #+#    #+#             */
-/*   Updated: 2023/11/05 12:06:02 by srachidi         ###   ########.fr       */
+/*   Updated: 2023/11/06 10:39:04 by srachidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-// #include <string.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

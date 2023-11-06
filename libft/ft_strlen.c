@@ -6,10 +6,11 @@
 /*   By: srachidi <srachidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 20:58:33 by srachidi          #+#    #+#             */
-/*   Updated: 2023/10/31 21:19:07 by srachidi         ###   ########.fr       */
+/*   Updated: 2023/11/06 10:21:43 by srachidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 // #include <stdio.h>
 size_t	ft_strlen(const char *s)
 {

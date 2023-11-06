@@ -6,11 +6,11 @@
 /*   By: srachidi <srachidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 12:07:58 by srachidi          #+#    #+#             */
-/*   Updated: 2023/11/03 15:33:27 by srachidi         ###   ########.fr       */
+/*   Updated: 2023/11/06 11:49:37 by srachidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

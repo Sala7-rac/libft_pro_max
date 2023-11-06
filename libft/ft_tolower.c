@@ -6,11 +6,12 @@
 /*   By: srachidi <srachidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 10:36:53 by srachidi          #+#    #+#             */
-/*   Updated: 2023/11/01 10:50:28 by srachidi         ###   ########.fr       */
+/*   Updated: 2023/11/06 12:42:48 by srachidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
+#include "libft.h"
+
 int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')

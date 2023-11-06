@@ -6,12 +6,11 @@
 /*   By: srachidi <srachidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 14:26:46 by srachidi          #+#    #+#             */
-/*   Updated: 2023/11/05 14:44:49 by srachidi         ###   ########.fr       */
+/*   Updated: 2023/11/06 10:38:29 by srachidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {

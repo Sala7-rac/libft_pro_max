@@ -6,26 +6,11 @@
 /*   By: srachidi <srachidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 14:45:25 by srachidi          #+#    #+#             */
-/*   Updated: 2023/11/05 15:02:04 by srachidi         ###   ########.fr       */
+/*   Updated: 2023/11/06 11:03:21 by srachidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-
-size_t	ft_strlen(const char *str)
-{
-	int	size;
-
-	size = 0;
-	while (*str)
-	{
-		size++;
-		str++;
-	}
-	return (size);
-}
+#include "libft.h"
 
 char	*ft_strdup(const char *s1)
 {
@@ -47,20 +32,21 @@ char	*ft_strdup(const char *s1)
 	return (tp);
 }
 
-// int main() {
+// int	main(void) {
 //     // Test Scenario 1: Duplicating a String
 //     const char *original1 = "Hello, World!";
 //     char *duplicate1 = ft_strdup(original1);
 
 //     if (duplicate1 != NULL) {
 //         printf("Test 1 - Duplicating a String: 
-//Duplicate string is %s\n", duplicate1); 
-// Expected: "Duplicate string is Hello, World!"
+// 		//Duplicate string is %s\n", duplicate1); 
+// 		//Expected: "Duplicate string is Hello, World!"
 
 //         // Free the duplicate string
 //         free(duplicate1);
 //     } else {
-//         printf("Test 1 - Duplicating a String: Memory allocation failed\n");
+//         printf("Test 1 - Duplicating a String: 
+//Memory allocation failed\n");
 //     }
 
 //     // Test Scenario 2: Duplicating an Empty String
@@ -69,8 +55,8 @@ char	*ft_strdup(const char *s1)
 
 //     if (duplicate2 != NULL) {
 //         printf("Test 2 - Duplicating an Empty String: 
-//Duplicate string is %s\n", duplicate2); 
-// Expected: "Duplicate string is "
+// 		//Duplicate string is %s\n", duplicate2); 
+// 		//Expected: "Duplicate string is "
 
 //         // Free the duplicate string
 //         free(duplicate2);
@@ -85,8 +71,8 @@ char	*ft_strdup(const char *s1)
 
 //     if (duplicate3 != NULL) {
 //         printf("Test 3 - Duplicating a Null String: 
-//Duplicate string is %s\n", duplicate3); 
-// Expected: "Duplicate string is (null)"
+// 		//Duplicate string is %s\n", duplicate3); 
+// 	//Expected: "Duplicate string is (null)"
 
 //         // Free the duplicate string
 //         free(duplicate3);

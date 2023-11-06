@@ -6,12 +6,11 @@
 /*   By: srachidi <srachidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 15:53:28 by srachidi          #+#    #+#             */
-/*   Updated: 2023/11/04 18:28:28 by srachidi         ###   ########.fr       */
+/*   Updated: 2023/11/06 12:42:43 by srachidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

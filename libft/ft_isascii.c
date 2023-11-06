@@ -6,11 +6,12 @@
 /*   By: srachidi <srachidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 15:33:09 by srachidi          #+#    #+#             */
-/*   Updated: 2023/10/31 20:39:35 by srachidi         ###   ########.fr       */
+/*   Updated: 2023/11/06 10:38:53 by srachidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
+#include "libft.h"
+
 int	ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);
