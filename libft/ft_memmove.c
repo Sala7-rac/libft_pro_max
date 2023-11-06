@@ -6,35 +6,57 @@
 /*   By: srachidi <srachidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 15:52:24 by srachidi          #+#    #+#             */
-/*   Updated: 2023/11/06 10:39:18 by srachidi         ###   ########.fr       */
+/*   Updated: 2023/11/06 20:22:24 by srachidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// void	*ft_memmove(void *dst, const void *src, size_t len)
+// {
+// 	char			*tdst;
+// 	char			*tsrc;
+// 	unsigned int	i;
+
+// 	if (dst == (void *)0 && src == (void *)0)
+// 		return (NULL);
+// 	tdst = (char *) dst;
+// 	tsrc = (char *) src;
+// 	i = 0;
+// 	if (tdst > tsrc && tdst < tsrc + len)
+// 	{
+// 		while (len-- > 0)
+// 			tdst[len - 1] = tsrc[len - 1];
+// 	}
+// 	else
+// 	{
+// 		while (i++ < len)
+// 			tdst[i] = tsrc[i];
+// 	}
+// 	return (dst);
+// }
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char			*tdst;
-	char			*tsrc;
-	unsigned int	i;
+	char	*c_src;
+	char	*c_dst;
+	size_t	i;
 
-	if (dst == (void *)0 && src == (void *)0)
+	if (!dst && !src)
 		return (NULL);
-	tdst = (char *) dst;
-	tsrc = (char *) src;
+	c_src = (char *) src;
+	c_dst = (char *) dst;
 	i = 0;
-	if (tdst > tsrc && tdst < tsrc + len)
-	{
+	if (c_dst > c_src)
 		while (len-- > 0)
-			tdst[len - 1] = tsrc[len - 1];
-	}
+			c_dst[len] = c_src[len];
 	else
 	{
 		while (i++ < len)
-			tdst[i] = tsrc[i];
+			c_dst[i] = c_src[i];
 	}
 	return (dst);
 }
+
 // /returns the original value of dst
 
 // int	main(void)

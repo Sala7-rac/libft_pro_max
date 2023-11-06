@@ -6,7 +6,7 @@
 /*   By: srachidi <srachidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 14:56:20 by srachidi          #+#    #+#             */
-/*   Updated: 2023/11/06 10:38:41 by srachidi         ###   ########.fr       */
+/*   Updated: 2023/11/06 20:18:07 by srachidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 int	ft_isalnum(int c)
 {
-	return (((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')) || 
-		(c >= 0 && c <= 9));
+	return (ft_isalpha(c) || ft_isdigit(c));
 }
 
 // int	main(void)
