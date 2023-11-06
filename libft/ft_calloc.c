@@ -6,7 +6,7 @@
 /*   By: srachidi <srachidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 14:26:46 by srachidi          #+#    #+#             */
-/*   Updated: 2023/11/06 10:38:29 by srachidi         ###   ########.fr       */
+/*   Updated: 2023/11/06 21:10:07 by srachidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,12 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	unsigned char	*tp;
-	size_t			i;
+	void	*tp;
 
-	i = 0;
 	tp = malloc(count * size);
 	if (!tp)
 		return (NULL);
-	while (i < count * size)
-		tp[i++] = 0;
+	ft_bzero(tp, (count * size));
 	return (tp);
 }
 

@@ -6,7 +6,7 @@
 /*   By: srachidi <srachidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 15:52:24 by srachidi          #+#    #+#             */
-/*   Updated: 2023/11/06 20:22:24 by srachidi         ###   ########.fr       */
+/*   Updated: 2023/11/06 20:56:13 by srachidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		while (len-- > 0)
 			c_dst[len] = c_src[len];
 	else
-	{
-		while (i++ < len)
-			c_dst[i] = c_src[i];
-	}
+		ft_memcpy(dst, src, len);
 	return (dst);
 }
 

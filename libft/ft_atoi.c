@@ -6,7 +6,7 @@
 /*   By: srachidi <srachidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 08:15:31 by srachidi          #+#    #+#             */
-/*   Updated: 2023/11/06 10:35:22 by srachidi         ###   ########.fr       */
+/*   Updated: 2023/11/06 20:43:50 by srachidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,19 +25,17 @@ int	ft_atoi(const char *str)
 
 	sign = 1;
 	res = 0;
-	if (ft_isspace(*str))
+	while (ft_isspace(*str))
 		str++;
-	if (*str == '+' && *(str + 1) != '-')
-		str++;
-	if (*str == '-')
+	if (*str == '+' || *str == '-')
 	{
-		sign *= -1;
+		if (*str == '-')
+			sign *= -1;
 		str++;
 	}
 	while (ft_isdigit(*str))
 	{
-		res *= 10;
-		res += *str - 48;
+		res = (res * 10) + (*str - 48);
 		str++;
 	}
 	return (res * sign);
