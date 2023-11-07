@@ -6,7 +6,7 @@
 /*   By: srachidi <srachidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 12:07:06 by srachidi          #+#    #+#             */
-/*   Updated: 2023/11/06 10:39:09 by srachidi         ###   ########.fr       */
+/*   Updated: 2023/11/07 13:02:22 by srachidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,16 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	unsigned char	*us2;
 	size_t			i;
 
-	us1 = (unsigned char *)s1;
-	us2 = (unsigned char *)s2;
 	i = 0;
+	us1 = (unsigned char *)s1; 
+	us2 = (unsigned char *)s2;
 	while (i < n)
 	{
-		if (us1[i] != us2[i])
-			return (us1[i] - us2[i]);
+		if (*us1 != *us2)
+			return (*us1 - *us2);
 		i++;
+		us1++;
+		us2++;
 	}
 	return (0);
 }
@@ -68,3 +70,18 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 
 //     return 0;
 // }
+
+	// unsigned char	*us1;
+	// unsigned char	*us2;
+	// size_t			i;
+
+	// us1 = (unsigned char *)s1;
+	// us2 = (unsigned char *)s2;
+	// i = 0;
+	// while (i < n)
+	// {
+	// 	if (us1[i] != us2[i])
+	// 		return (us1[i] - us2[i]);
+	// 	i++;
+	// }
+	// return (0);

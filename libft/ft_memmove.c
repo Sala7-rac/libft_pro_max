@@ -6,53 +6,56 @@
 /*   By: srachidi <srachidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 15:52:24 by srachidi          #+#    #+#             */
-/*   Updated: 2023/11/06 20:56:13 by srachidi         ###   ########.fr       */
+/*   Updated: 2023/11/07 12:41:06 by srachidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// void	*ft_memmove(void *dst, const void *src, size_t len)
-// {
-// 	char			*tdst;
-// 	char			*tsrc;
-// 	unsigned int	i;
-
-// 	if (dst == (void *)0 && src == (void *)0)
-// 		return (NULL);
-// 	tdst = (char *) dst;
-// 	tsrc = (char *) src;
-// 	i = 0;
-// 	if (tdst > tsrc && tdst < tsrc + len)
-// 	{
-// 		while (len-- > 0)
-// 			tdst[len - 1] = tsrc[len - 1];
-// 	}
-// 	else
-// 	{
-// 		while (i++ < len)
-// 			tdst[i] = tsrc[i];
-// 	}
-// 	return (dst);
-// }
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char	*c_src;
-	char	*c_dst;
+	char	*pdst;
+	char	*psrc;
 	size_t	i;
 
-	if (!dst && !src)
+	i = -1;
+	pdst = (char *)dst;
+	psrc = (char *)src;
+	if (dst == (void *)0 && src == (void *)0)
 		return (NULL);
-	c_src = (char *) src;
-	c_dst = (char *) dst;
-	i = 0;
-	if (c_dst > c_src)
-		while (len-- > 0)
-			c_dst[len] = c_src[len];
+	if (pdst > psrc)
+	{
+		while (len > 0)
+		{
+			pdst[len - 1] = psrc[len - 1];
+			len--;
+		}
+	}
 	else
-		ft_memcpy(dst, src, len);
+	{
+		while (++i < len)
+			pdst[i] = psrc[i];
+	}
 	return (dst);
 }
+// void	*ft_memmove(void *dst, const void *src, size_t len)
+// {
+// 	char	*c_src;
+// 	char	*c_dst;
+// 	size_t	i;
+
+// 	if (!dst && !src)
+// 		return (NULL);
+// 	c_src = (char *) src;
+// 	c_dst = (char *) dst;
+// 	i = 0;
+// 	if (c_dst > c_src)
+// 		while (len-- > 0)
+// 			c_dst[len] = c_src[len];
+// 	else
+// 		ft_memcpy(dst, src, len);
+// 	return (dst);
+// }
 
 // /returns the original value of dst
 

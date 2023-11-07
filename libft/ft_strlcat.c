@@ -6,26 +6,27 @@
 /*   By: srachidi <srachidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 10:38:47 by srachidi          #+#    #+#             */
-/*   Updated: 2023/11/06 20:56:30 by srachidi         ###   ########.fr       */
+/*   Updated: 2023/11/07 14:53:44 by srachidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//always return dstsize+srclen
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t			srclen;
-	size_t			dstlen;
-	unsigned int	i;
+	size_t	dstlen;
+	size_t	srclen;
+	int		i;
 
 	i = 0;
-	srclen = ft_strlen(src);
 	dstlen = ft_strlen(dst);
+	srclen = ft_strlen(src);
 	if (dstlen >= dstsize || dstsize == 0)
 		return (srclen + dstsize);
-	while (src[i] && (i + dstlen) < dstsize - 1)
+	while (src[i] && (i + dstlen) < (dstsize - 1))
 	{
-		dst[i + dstlen] = src[i];
+		dst[dstlen + i] = src[i];
 		i++;
 	}
 	dst[dstlen + i] = '\0';
@@ -68,3 +69,22 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 // 	printf("ft_strlcat result string : %s \n", fdst);
 // 	printf("ft_strlcat returned value : %zu\n", fres);
 // }
+
+/*
+	size_t			srclen;
+	size_t			dstlen;
+	unsigned int	i;
+
+	i = 0;
+	srclen = ft_strlen(src);
+	dstlen = ft_strlen(dst);
+	if (dstlen >= dstsize || dstsize == 0)
+		return (srclen + dstsize);
+	while (src[i] && (i + dstlen) < dstsize - 1)
+	{
+		dst[i + dstlen] = src[i];
+		i++;
+	}
+	dst[dstlen + i] = '\0';
+	return (srclen + dstlen);
+*/
