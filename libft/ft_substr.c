@@ -6,7 +6,7 @@
 /*   By: srachidi <srachidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 20:26:12 by srachidi          #+#    #+#             */
-/*   Updated: 2023/11/09 09:46:53 by srachidi         ###   ########.fr       */
+/*   Updated: 2023/11/09 15:31:50 by srachidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*substring;
 	size_t	i;
 
+	if (!s)
+		return (NULL);
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
+	if (len > ft_strlen(s + start))
+		len = ft_strlen(s + start);
 	i = 0;
 	substring = (char *)malloc((len * sizeof(char)) + 1);
 	if (!substring)

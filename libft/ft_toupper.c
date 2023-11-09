@@ -6,7 +6,7 @@
 /*   By: srachidi <srachidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 21:20:33 by srachidi          #+#    #+#             */
-/*   Updated: 2023/11/06 18:07:34 by srachidi         ###   ########.fr       */
+/*   Updated: 2023/11/09 16:22:29 by srachidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 
 int	ft_toupper(int c)
 {
-	if (c >= 97 && c <= 122)
-		c -= 32;
-	return (c);
+	return (c -= (c >= 'a' && c <= 'z') * 32);
 }
 
 // int	main(void)
