@@ -1,37 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: srachidi <srachidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 21:13:50 by srachidi          #+#    #+#             */
-/*   Updated: 2023/11/08 20:23:01 by srachidi         ###   ########.fr       */
+/*   Created: 2023/11/08 20:26:12 by srachidi          #+#    #+#             */
+/*   Updated: 2023/11/09 09:46:53 by srachidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
+	char	*substring;
 	size_t	i;
 
 	i = 0;
-	while (s[i])
+	substring = (char *)malloc((len * sizeof(char)) + 1);
+	if (!substring)
+		return (NULL);
+	while (s[start] && i < len)
 	{
-		write(fd, &s[i], 1);
+		substring[i] = s[start];
+		start++;
 		i++;
 	}
+	substring[i] = '\0';
+	return (substring);
 }
 
 // int	main(void)
 // {
-// 	int	fd;
-// 	int	fds;
-
-// 	fd = open("wa7ch.txt", O_CREAT | O_RDWR | O_APPEND, 0777 );
-// 	fds = open("wa7chiwurtiewyt", O_CREAT | O_RDWR | O_APPEND, 0777 );
-// 	printf(">>>>> %d\n", fd);
-// 	printf(">>>>> %d\n", fds);
-// 	ft_putstr_fd("ana m9awaaaaaaad", fd);
+// 	char	*test = "skafandri";
+// 	char	*res = ft_substr(test, 3, 6);
+// 	printf("the substring is : %s", res);
 // }

@@ -6,7 +6,7 @@
 /*   By: srachidi <srachidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 09:46:11 by srachidi          #+#    #+#             */
-/*   Updated: 2023/11/06 11:20:50 by srachidi         ###   ########.fr       */
+/*   Updated: 2023/11/08 20:30:39 by srachidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <strings.h>
-# include <stdlib.h>
+# include <unistd.h>
 // Function prototypes
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
