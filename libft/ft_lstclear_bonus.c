@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: srachidi <srachidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/13 15:27:28 by srachidi          #+#    #+#             */
-/*   Updated: 2023/11/13 16:29:09 by srachidi         ###   ########.fr       */
+/*   Created: 2023/11/13 17:01:56 by srachidi          #+#    #+#             */
+/*   Updated: 2023/11/15 21:37:08 by srachidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "bonus.h"
 
-int	ft_lstsize(t_list *lst)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	int		length;
+	t_list	*cur_node;
+	t_list	*nx_node;
 
-	length = 0;
-	while (lst != NULL)
+	cur_node = *lst;
+	while (cur_node != NULL)
 	{
-		lst = lst->next;
-		length++;
+		nx_node = cur_node->next;
+		del(cur_node->content);
+		free (cur_node);
+		cur_node = nx_node;
 	}
-	return (length);
+	*lst = NULL;
 }

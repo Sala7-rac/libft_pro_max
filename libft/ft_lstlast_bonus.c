@@ -1,31 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: srachidi <srachidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/13 14:56:30 by srachidi          #+#    #+#             */
-/*   Updated: 2023/11/13 15:15:58 by srachidi         ###   ########.fr       */
+/*   Created: 2023/11/13 16:30:20 by srachidi          #+#    #+#             */
+/*   Updated: 2023/11/15 21:36:47 by srachidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "bonus.h"
 
-t_list	*ft_lstnew(void *content)
+t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	*the_node;
-
-	the_node = malloc(sizeof(t_list));
-	if (!the_node)
-		return (NULL);
-	the_node->content = content;
-	the_node->next = NULL;
-	return (the_node);
+	while (lst != NULL && lst->next != NULL)
+		lst = lst->next;
+	return (lst);
 }
-/*
-	1- alocate and create a node;
-	2- content member = content;
-	3- next to NULL;
-
-*/
