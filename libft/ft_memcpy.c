@@ -6,11 +6,12 @@
 /*   By: srachidi <srachidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 12:07:58 by srachidi          #+#    #+#             */
-/*   Updated: 2023/11/06 11:49:37 by srachidi         ###   ########.fr       */
+/*   Updated: 2023/11/16 16:43:39 by srachidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
@@ -28,20 +29,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-	//return the original value of dst
-
-// int	main(void)
-// {
-// 	int source[7] = {1, 2, 3, 4, 5, 6, 7};
-// 	int destination[8];
-// 	int	x = 8;
-// 	int	i = 0;
-// 	ft_memcpy(destination, source, 8 * sizeof(int));
-
-// 	while (x > 0)
-// 	{
-// 		printf("%d ,",destination[i]);
-// 		x--;
-// 		i++;
-// 	}
-// }

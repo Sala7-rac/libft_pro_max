@@ -6,16 +6,11 @@
 /*   By: srachidi <srachidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 11:09:58 by srachidi          #+#    #+#             */
-/*   Updated: 2023/11/12 13:58:39 by srachidi         ###   ########.fr       */
+/*   Updated: 2023/11/16 16:43:20 by srachidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <mach/kern_return.h>
-#include <malloc/malloc.h>
-#include <stddef.h>
-#include <stdio.h>
-#include <stdlib.h>
 
 static int	int_counter(int n)
 {
@@ -68,10 +63,3 @@ char	*ft_itoa(int n)
 	result[i] = '\0';
 	return (result);
 }
-
-// int	main(void)
-// {
-// 	// int	kda = -395006024;
-// 	printf("%s", ft_itoa(9));
-// 	return (0);
-// }

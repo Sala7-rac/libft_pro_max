@@ -6,7 +6,7 @@
 /*   By: srachidi <srachidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 20:26:12 by srachidi          #+#    #+#             */
-/*   Updated: 2023/11/09 15:31:50 by srachidi         ###   ########.fr       */
+/*   Updated: 2023/11/16 16:41:12 by srachidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substring[i] = '\0';
 	return (substring);
 }
-
-// int	main(void)
-// {
-// 	char	*test = "skafandri";
-// 	char	*res = ft_substr(test, 3, 6);
-// 	printf("the substring is : %s", res);
-// }

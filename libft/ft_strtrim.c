@@ -6,13 +6,11 @@
 /*   By: srachidi <srachidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 10:11:10 by srachidi          #+#    #+#             */
-/*   Updated: 2023/11/09 16:18:44 by srachidi         ###   ########.fr       */
+/*   Updated: 2023/11/16 16:42:38 by srachidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
-#include <stdio.h>
 
 static int	set_checker(const char *str, char to_find)
 {
@@ -48,11 +46,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	trimmed = ft_substr(s1, i, (j - i) + 1);
 	return (trimmed);
 }
-
-// int	main(void)
-// {
-// 	char *s1 = "ababaaaMy name is Simonbbaaabba";
-// 	char *set = "ab";
-// 	printf("the trimmed string is : %s \n",ft_strtrim(s1, set));
-// 	// expected result is : My name is Simon
-// }

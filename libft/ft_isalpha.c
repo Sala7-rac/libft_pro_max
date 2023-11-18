@@ -6,7 +6,7 @@
 /*   By: srachidi <srachidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 12:18:43 by srachidi          #+#    #+#             */
-/*   Updated: 2023/11/06 10:38:48 by srachidi         ###   ########.fr       */
+/*   Updated: 2023/11/16 16:44:46 by srachidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,3 @@ int	ft_isalpha(int c)
 {
 	return ((c >= 65 && c <= 90) || (c >= 97 && c <= 122));
 }
-// int	main(void)
-// {
-// 	char	t1;
-// 	int		t2;
-
-// 	t1 = 't';
-// 	t2 = 6230;
-// 	printf("t1 = %d", ft_isalpha(t1));
-// 	printf("t2 = %d", ft_isalpha(t2));
-// }

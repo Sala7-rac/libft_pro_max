@@ -6,12 +6,11 @@
 /*   By: srachidi <srachidi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 09:47:16 by srachidi          #+#    #+#             */
-/*   Updated: 2023/11/09 10:09:20 by srachidi         ###   ########.fr       */
+/*   Updated: 2023/11/16 18:25:36 by srachidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -38,13 +37,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	joinedstring[i] = '\0';
 	return (joinedstring);
 }
-
-// int	main(void)
-// {
-// 	char *s1 = "salamo";
-// 	char *s2 = " alaykom";
-// 	char *res = ft_strjoin(s1, s2);
-// 	printf("%s\n", res);
-// 	free(res);
-// 	return (0);
-// }
