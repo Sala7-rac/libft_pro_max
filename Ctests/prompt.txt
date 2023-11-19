@@ -1,0 +1,2 @@
+can you samurise strncmp behavior in difrrent cases.
+can you provide all test scenarios of the strchr function  companed with the expected output for each test in code format please.
